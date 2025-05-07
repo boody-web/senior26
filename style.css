@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe0ef 0%, #fff6e0 100%);
+    color: #a85e6c;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    background: linear-gradient(90deg, #ffb6c1 0%, #ffd700 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.1);
+  }
+  
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #a85e6c;
+    text-shadow: 1px 1px 8px #ffd70099;
+  }
+  
+  .subtitle {
+    font-size: 2.2rem;
+    color: #d48c6e;
+    margin-top: 0.5rem;
+    color: black; /* اللون العادي */
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+    
+    .subtitle:hover {
+      color: red; /* اللون لما تشاور عليها */
+    }
+    
+  
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 2vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .gallery-item {
+    background: #fff6e0;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #ffd70022;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px #ffb6c155;
+  }
+  
+  .gallery-item img, .gallery-item video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .gallery-item .student-name {
+    padding: 0.7rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #d4b4ba;
+    background: #fff0f6;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(255, 182, 193, 0.85);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff6e0;
+    margin: auto;
+    border-radius: 18px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 95vw;
+    max-height: 90vh;
+    box-shadow: 0 8px 32px #ffd70055;
+    position: relative;
+    text-align: center;
+  }
+  
+  .modal-content img, .modal-content video {
+    max-width: 90vw;
+    max-height: 50vh;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #fff;
+  }
+  
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #d48c6e;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .close:hover {
+    color: #a85e6c;
+  }
+  
+  .caption {
+    margin-top: 0.5rem;
+  }
+  
+  .caption h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #a85e6c;
+    margin-bottom: 0.2rem;
+  }
+  
+  .caption .ana {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .caption a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+  .caption a:hover {
+    color: #a85e6c;
+  }
+  
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1rem 0.5rem;
+    }
+    .modal-content {
+      padding: 1rem 0.5rem;
+    }
+    .gallery-item img, .gallery-item video {
+      height: 120px;
+    }
+  } 
